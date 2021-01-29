@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial scale=1.0" />
+        <link rel="stylesheet" href="{% static 'myapp2/css/style.css'%}" />
+        <title>{{title}}</title>
+    </head>
+
+    <body>
+        <h2>Django is {{cname}}</h2>
+        <img src="{% static 'myapp1/images/Zara Shirt.jpg' %}" alt="Django" />
+        <img src="{% get_static_prefix %}myapp1/images/Zara Shirt1.jpg" alt="Django" />
+        <hr />
+        <form action="">
+            <input type="button" value="Click This" onclick="disp()" />
+        </form>
+        <script src="{% static 'myapp1/js/all.js' %}"></script>
+    </body>
+</html>
